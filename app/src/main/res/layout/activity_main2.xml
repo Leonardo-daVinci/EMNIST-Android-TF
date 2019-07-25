@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main2Activity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/draw_newbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Start New" />
+
+        <Button
+            android:id="@+id/draw_drawbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Brush" />
+
+        <Button
+            android:id="@+id/draw_erasebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Erase" />
+
+        <Button
+            android:id="@+id/draw_savebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Save" />
+
+    </LinearLayout>
+
+    <apps.nocturnuslabs.digitrecognizer.views.DrawingView
+        android:id="@+id/draw_drawing"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF" />
+
+</LinearLayout>
