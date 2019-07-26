@@ -1,7 +1,6 @@
 package apps.nocturnuslabs.digitrecognizer;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -23,7 +22,7 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
     private static final int PIXEL_WIDTH = 28;
     private static final int PIXEL_HEIGHT = 28;
 
-    private Button clearBtn, detectBtn, paintBtn;
+    private Button clearBtn, detectBtn;
     private TextView resultText;
     private List<Classifier> mClassifiers = new ArrayList<>();
 
@@ -39,22 +38,19 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        drawView = (DrawView) findViewById(R.id.main_draw);
+        drawView = findViewById(R.id.main_draw);
         drawModel = new DrawModel(PIXEL_WIDTH, PIXEL_HEIGHT);
 
         drawView.setModel(drawModel);
         drawView.setOnTouchListener(this);
 
-        clearBtn = (Button) findViewById(R.id.main_clearbtn);
+        clearBtn = findViewById(R.id.main_clearbtn);
         clearBtn.setOnClickListener(this);
 
-        detectBtn = (Button) findViewById(R.id.main_detectbtn);
+        detectBtn = findViewById(R.id.main_detectbtn);
         detectBtn.setOnClickListener(this);
 
-        paintBtn = (Button) findViewById(R.id.main_paint);
-        //paintBtn.setOnClickListener(this);
-
-        resultText = (TextView) findViewById(R.id.main_resultbox);
+        resultText = findViewById(R.id.main_resultbox);
 
         loadModel();
     }
@@ -120,10 +116,6 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
             }
 
             resultText.setText(text);
-
-        } else if (v.getId() == R.id.main_paint) {
-            Intent drawIntent = new Intent(MainActivity.this, Main2Activity.class);
-            startActivity(drawIntent);
         }
     }
 

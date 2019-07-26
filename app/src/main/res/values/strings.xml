@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Digit Recognizer</string>
+    <string name="app_name">Character Recognizer</string>
     <string name="clear">Clear</string>
     <string name="detect">Detect</string>
 </resources>
