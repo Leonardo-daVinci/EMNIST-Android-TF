@@ -4,6 +4,7 @@ package apps.nocturnuslabs.digitrecognizer.models;
 import android.content.res.AssetManager;
 
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -48,7 +49,7 @@ public class TensorFlowClassifier implements Classifier {
         c.labels = readLabels(assetsManager, labelFile);
 
         c.tfHelper = new TensorFlowInferenceInterface(assetsManager, modelPath);
-        int numClasses = 10;
+        int numClasses = 47;
 
         c.inputSize = inputSize;
         c.outputNames = new String[]{outputName};

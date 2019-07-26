@@ -69,8 +69,8 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
 
                     mClassifiers.add(
                             TensorFlowClassifier.create(getAssets(),"Keras",
-                                    "opt_mnist_convnet-keras.pb","labels.txt",PIXEL_WIDTH,
-                                    "conv2d_1_input","dense_2/Softmax",false)
+                                    "opt_emnist_convnet-keras.pb", "alpha_labels.txt", PIXEL_WIDTH,
+                                    "conv2d_10_input", "dense_8/Softmax", false)
                     );
 
                 }catch(final Exception e){
